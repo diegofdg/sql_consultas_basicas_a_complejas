@@ -1,0 +1,2 @@
+#* Consulta en la tabla FILM filtrando donde special_features sea "TRAILERS" o "TRAILERS, DELETED SCENES" y rating sea "G" o "NC-17" y length sea mayor a 100 *#
+SELECT * FROM sakila.film WHERE special_features IN ("TRAILERS","TRAILERS, DELETED SCENES") AND rating IN ("G", "NC-17") AND length > 100;
