@@ -1,0 +1,2 @@
+#* Realiza la unión de las tablas ADDRESS y CITY usando la referencia de city_id en ambas tablas mostrando de la tabla ADDRESS address con el alias Dirección y de la tabla CITY city as Ciudad *#
+SELECT a.address as Dirección, c.city as Ciudad FROM sakila.address a INNER JOIN sakila.city c ON (a.city_id = c.city_id);
