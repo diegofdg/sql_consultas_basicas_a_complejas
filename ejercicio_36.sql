@@ -1,0 +1,2 @@
+#* Realiza la unión de las tablas ADDRESS con las tablas CITY y COUNTRY mostrando las columnas address, city y country *#
+SELECT a.address, c.city, co.country FROM sakila.address a INNER JOIN sakila.city c ON (a.city_id = c.city_id) INNER JOIN sakila.country co ON (c.country_id = co.country_id);
