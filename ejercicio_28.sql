@@ -1,0 +1,2 @@
+#* Consulta en la tabla ACTOR los registros donde first_name tenga con "NE" en cualquier posición y last_name tenga "RO" en cualquier posición *#
+SELECT * FROM sakila.actor WHERE first_name LIKE "%NE%" AND last_name LIKE "%RO%";
