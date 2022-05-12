@@ -1,0 +1,2 @@
+#* Consulta la tabla CUSTOMER, realiza un LEFT JOIN con las tablas store y address y mostrar las columnas first_name, address, store_id *#
+SELECT c.first_name, a.address, s.store_id FROM sakila.customer c LEFT JOIN sakila.store s ON (c.store_id = s.store_id) LEFT JOIN sakila.address a ON (c.address_id = a.address_id);
