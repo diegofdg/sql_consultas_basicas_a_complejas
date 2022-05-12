@@ -1,0 +1,2 @@
+#* Consulta en la tabla ACTOR los registros donde first_name empieza con "C" y termina con "N" y last_name empiece con "G" *#
+SELECT * FROM sakila.actor WHERE first_name LIKE "C%N" AND last_name LIKE "G%";
