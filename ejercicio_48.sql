@@ -1,0 +1,2 @@
+#* Consulta la tabla RENTAL, realiza un MAX de la columna rental_date y consulta todos los registros de la columna last_name de la tabla ACTOR sin repetir ninguno *#
+SELECT customer_id, MAX(rental_date) FROM sakila.rental GROUP BY customer_id;
