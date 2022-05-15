@@ -1,0 +1,2 @@
+#* Usa la función CONCAT() en la tabla customer y has un concatenado entre first_name, last_name y email. *#
+SELECT first_name, last_name, email, CONCAT(first_name, " - ", last_name, " - ", email) AS resultado FROM sakila.customer;
