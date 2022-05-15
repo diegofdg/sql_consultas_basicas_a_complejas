@@ -1,0 +1,2 @@
+#* Consulta la tabla FILM y une las columnas title, description y release_year separandolas con un guión medio *#
+SELECT CONCAT_WS(" - ", title, description y release_year) AS resultado FROM sakila.FILM;
