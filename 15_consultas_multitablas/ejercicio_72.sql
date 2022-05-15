@@ -1,0 +1,2 @@
+#* Haga una lista de cada película y el número de actores que figuran en esa película. Utiliza tablas FILM_ACTOR y FILM. *#
+SELECT b.title, COUNT(a.actor_id) as contador_de_actores FROM sakila.film_actor a INNER JOIN sakila.film b ON (a.film_id = b.film_id) GROUP BY b.title;
