@@ -1,0 +1,2 @@
+#* Quién ha vendido más del STAFF en Agosto 2005?. *#
+SELECT a.first_name, a.last_name, SUM(b.amount) as total FROM sakila.staff a INNER JOIN sakila.payment b ON (a.staff_id = b.staff_id) AND b.payment_date LIKE "2005-08%" GROUP BY a.first_name, a.last_name
