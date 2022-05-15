@@ -1,0 +1,2 @@
+#* Cuantas copias de la película Hunchback Impossible existen en el sistema de inventario?. *#
+SELECT a.title, COUNT(a.title) AS copias_disponibles FROM sakila.film a INNER JOIN sakila.inventory b ON (a.film_id = b.film_id) WHERE title = "Hunchback Impossible";
