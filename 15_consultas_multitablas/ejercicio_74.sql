@@ -1,0 +1,2 @@
+#* Anota el total pagado por cada cliente. Listar los clientes alfabéticamente por apellido. *#
+SELECT first_name, last_name, SUM(amount) AS "total_pagado_por_cliente" FROM sakila.payment a INNER JOIN sakila.customer b ON (a.customer_id = b.customer_id) GROUP BY first_name, last_name ORDER BY last_name ASC;
