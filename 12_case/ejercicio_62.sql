@@ -1,0 +1,2 @@
+#* Consulta la tabla ADDRESS y muestra una nueva columna llamada comentario que contendrá el texto "Sin direccion 2" cuando el valor de la columna address2 sea nulo y "Con dirección 2" en caso contrario *#
+SELECT address, address2, CASE WHEN address2 IS NULL THEN "Sin dirección 2" ELSE "Con dirección 2" END AS comentario FROM sakila.address;
