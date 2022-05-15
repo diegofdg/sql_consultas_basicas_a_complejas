@@ -1,0 +1,2 @@
+#* Consulta la tabla PAYMENT y has un group by por customer_id para el promedio de amount, después usa la función ROUND() para redondear a cero decimales el promedio. *#
+SELECT *, ROUND(AVG(amount),0) AS resultado FROM sakila.payment GROUP BY customer_id;
