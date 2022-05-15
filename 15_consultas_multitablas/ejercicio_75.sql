@@ -1,0 +1,5 @@
+#* Resuelve el siguiente problema:
+#* Encuentra DVD vencidos
+#* Muchas tiendas de DVD producen una lista diaria de alquileres vencidos para que los clientes puedan ser contactados y se les pida que devuelvan sus DVD vencidos.
+#* Para crear una lista de este tipo, busque películas en la tabla de alquiler con una fecha de retorno NULA o donde la fecha de alquiler sea más antigua que la duración del alquiler especificada en la tabla de películas. Si es así, la película está atrasada y debemos producir el nombre de la película junto con el nombre del cliente y el número de teléfono.
+SELECT CONCAT_WS(" ", c.first_name, c.last_name) AS nombre_completo, a.phone, f.title, f.rental_duration, r.rental_date, r.return_date, DATEDIFF(r.return_date, r.rental_date) - f.rental_duration AS días_de_retraso FROM sakila.customer c INNER JOIN sakila.rental r ON r.customer_id = c.customer_id INNER JOIN sakila.address a ON a.address_id = c.address_id INNER JOIN sakila.inventory i ON i.inventory_id = r.inventory_id INNER JOIN sakila.film f ON f.film_id = i.film_id WHERE r.return_date IS NULL OR DATEDIFF(r.return_date, r.rental_date) > f.rental_duration;
