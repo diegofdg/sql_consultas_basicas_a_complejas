@@ -1,0 +1,2 @@
+#* Usa la función CASE en la tabla FILM y calcula 3 casos, si rental_rate es menor que 1 ingresa "Pelicula Mala", si la calificacion esta dentro de 1 y 3 que muestre "Pelicula Buena", si es mayor que muestre "Pelicula Excelente" *#
+SELECT film_id, rental_rate, CASE WHEN rental_rate < 1 THEN "Película Mala" WHEN amount BETWEEN 1 AND 3 THEN "Película Buena" ELSE "Película Excelente" END AS comentario FROM sakila.FILM;
