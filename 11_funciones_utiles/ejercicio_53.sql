@@ -1,0 +1,2 @@
+#* Consulta la tabla CUSTOMER y une las columnas first_name y last_name en una columna llamada nombre_completo *#
+SELECT first_name, last_name, CONCAT(first_name, " ", last_name) AS nombre_completo FROM sakila.customer;
