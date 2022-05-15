@@ -1,0 +1,2 @@
+#* Consulta la tabla ACTOR y muestra en una columna llamada nombre_completo la unión de las columnas first_name y last_name en minúsculas *#
+SELECT *, LCASE(CONCAT(first_name, " ", last_name)) AS nombre_completo FROM sakila.ACTOR;
