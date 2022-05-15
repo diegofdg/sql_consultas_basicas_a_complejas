@@ -1,0 +1,2 @@
+#* Consulta la tabla PAYMENT y muestra una nueva columna llamada comentario que contendrá el texto "Precio mínimo" cuando el valor de la columna amount sea menor a 1, "Precio intermedio" cuando sea entre 1 y 3, y "Precio máximo" en caso contrario *#
+SELECT payment_id, amount, CASE WHEN amount < 1 THEN "Precio mínimo" WHEN amount BETWEEN 1 AND 3 THEN "Precio intermedio" ELSE "Precio máximo" END AS comentario FROM sakila.payment;
