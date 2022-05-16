@@ -1,0 +1,2 @@
+#* Inserta un registro en la tabla ADDRESS #*
+INSERT INTO sakila.address (address, district, city_id, postal_code, phone) VALUES ("DIRECCION DE PRUEBA","DISTRITO DE PRUEBA","401", "97661", "987654321098");
